@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "build:ui": "rm -rf dist && cd ../../part2/telContact && npm run build && cp -r dist ../../part3/FullStackOpenExercisesPart3",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "lint": "eslint ."
   },
   "author": "Miguel Vigo",
   "license": "ISC",
@@ -21,7 +22,9 @@
     "standard": "^17.1.0"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
+    "@stylistic/eslint-plugin-js": "^2.2.1",
+    "eslint": "^9.5.0",
+    "globals": "^15.6.0",
     "nodemon": "^3.1.3"
   }
 }
